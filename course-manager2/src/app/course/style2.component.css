@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#table {
+    width: 70%;
+}
+
+#imgLogo {
+    width: 30%;
+    height: 20%;
+}
+
+tr {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+app-star {
+    background: red;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50rem;
+    height: 10rem;
+}
+
+.col-md-2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buttons-options {
+    display: flex;
+
+    align-items: center;
+}
