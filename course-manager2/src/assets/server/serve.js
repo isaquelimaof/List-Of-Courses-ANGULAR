@@ -27,7 +27,7 @@ app.route('/api/courses').post((request, response) => {
   const firstId = COURSES ? Math.max.apply(null, COURSES.map(courseIterator => courseIterator.id)) + 1 : 1;
   course.id = firstId;
   COURSES.push(course);
-  
+
 
   response.status(201).send(course);
 });
@@ -51,7 +51,7 @@ app.route('/api/courses/:id').get((request, response) => {
 app.route('/api/courses/:id').delete((request, response)=> {
   const courseId = +request.params['id'];
   COURSES = COURSES.filter(courseIterator => courseIterator.id !== courseId);
-  
+
   response.status(204).send({});
 });
 

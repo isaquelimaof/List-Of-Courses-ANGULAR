@@ -2,73 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
 
 <body>
-    <h2>Course Info</h2>
+  <h2>Course Info</h2>
 
-    <hr />
+  <hr />
 
-    <form #courseForm="ngForm">
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Name:</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.name" required name="name" #courseName="ngModel"
-                    [ngClass]="{'is-invalid': courseName.invalid, 'is-valid': courseName.valid}" class="form-control">
+  <form #courseForm="ngForm">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Name:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="course.name" required name="name" #courseName="ngModel"
+          [ngClass]="{'is-invalid': courseName.invalid, 'is-valid': courseName.valid}" class="form-control">
 
-                <div class="invalid-feedback">
-                    <span> Course Name is required </span>
-                </div>
-            </div>
+        <div class="invalid-feedback">
+          <span> Course Name is required </span>
         </div>
+      </div>
+    </div>
 
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Price:</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.price" required name="price" #coursePrice="ngModel" type="number"
-                    [ngClass]="{'is-invalid': coursePrice.invalid, 'is-valid': coursePrice.valid}" class="form-control">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Price:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="course.price" required name="price" #coursePrice="ngModel" type="number"
+          [ngClass]="{'is-invalid': coursePrice.invalid, 'is-valid': coursePrice.valid}" class="form-control">
 
-                <div class="invalid-feedback">
-                    <span> Course Price is required </span>
-                </div>
-            </div>
+        <div class="invalid-feedback">
+          <span> Course Price is required </span>
         </div>
+      </div>
+    </div>
 
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Rating:</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.rating" required name="rating" #courseRating="ngModel" type="number"
-                    [ngClass]="{'is-invalid': courseRating.invalid, 'is-valid': courseRating.valid}"
-                    class="form-control">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Rating:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="course.rating" required name="rating" #courseRating="ngModel" type="number"
+          [ngClass]="{'is-invalid': courseRating.invalid, 'is-valid': courseRating.valid}" class="form-control">
 
-                <div class="invalid-feedback">
-                    <span> Course Rating is required </span>
-                </div>
-            </div>
+        <div class="invalid-feedback">
+          <span> Course Rating is required </span>
         </div>
+      </div>
+    </div>
 
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Description:</label>
-            <div class="col-sm-10">
-                <textarea [(ngModel)]="course.description" required name="description" #coursedescription="ngModel"
-                    [ngClass]="{'is-invalid': coursedescription.invalid, 'is-valid': coursedescription.valid}"
-                    class="form-control"></textarea>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Description:</label>
+      <div class="col-sm-10">
+        <textarea [(ngModel)]="course.description" required name="description" #coursedescription="ngModel"
+          [ngClass]="{'is-invalid': coursedescription.invalid, 'is-valid': coursedescription.valid}"
+          class="form-control"></textarea>
 
-                <div class="invalid-feedback">
-                    <span> Course Description is required </span>
-                </div>
-            </div>
+        <div class="invalid-feedback">
+          <span> Course Description is required </span>
         </div>
+      </div>
+    </div>
 
-        <button [disabled]="courseForm.invalid" (click)="save()" [routerLink]="['/courses']" class="btn btn-primary mr-2">Save</button>
-        <button [routerLink]="['/courses']" class="btn btn-secondary mr-2">Back</button>
+    <button [disabled]="courseForm.invalid" (click)="save()" [routerLink]="['/courses']"
+      class="btn btn-primary mr-2">Save</button>
+    <button [routerLink]="['/courses']" class="btn btn-secondary mr-2">Back</button>
 
-    </form>
+  </form>
 </body>
 
 </html>
